@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+   }
+
+group = 'org.Anita'
+version = '1.0-SNAPSHOT'
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.5.1'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
+    implementation group: 'org.json', name: 'json', version: '20220924'
+
+}
+
+test {
+    useTestNG {
+        suites 'src/test/resources/testng.xml'
+    }
+}
